@@ -7,7 +7,7 @@ export const USER_INFO = {
   email: "kangkan9153@gmail.com",
   github: "https://github.com",
   linkedin: "https://www.linkedin.com/in/kangkan-sarkar06/",
-  instagram: "https://instagram.com",
+  instagram: "https://www.instagram.com/kangkanskr/",
   stats: {
     projects: "15+",
     technologies: "20+",
