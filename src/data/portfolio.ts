@@ -46,7 +46,6 @@ export const SKILLS = [
     items: [
       { name: "KiCad", status: "Proficient" },
       { name: "Proteus", status: "Proficient" },
-      { name: "Fusion 360", status: "Learning" },
     ]
   },
   {

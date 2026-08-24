@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from 'react';
 import { Section } from '../ui/Section';
 import { USER_INFO } from '../../data/portfolio';

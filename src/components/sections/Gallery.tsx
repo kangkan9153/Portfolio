@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from 'react';
 import { Section } from '../ui/Section';
 import { GALLERY_IMAGES } from '../../data/portfolio';

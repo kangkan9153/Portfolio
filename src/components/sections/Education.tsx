@@ -30,38 +30,6 @@ export function Education() {
           </motion.div>
         </div>
 
-        {/* Saved for later if needed:
-        <div>
-          <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
-            <Award className="text-primary" /> Certifications
-          </h2>
-          
-          <div className="space-y-4">
-            {CERTIFICATIONS.map((cert, idx) => (
-              <motion.div 
-                key={idx}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="bg-card border border-border p-5 rounded-xl flex items-center justify-between group hover:border-primary/50 transition-colors"
-              >
-                <div>
-                  <h4 className="font-bold">{cert.name}</h4>
-                  <div className="flex items-center gap-3 text-sm text-muted-foreground mt-1">
-                    <span>{cert.organization}</span>
-                    <span className="w-1 h-1 rounded-full bg-border" />
-                    <span className="font-mono-tech">{cert.date}</span>
-                  </div>
-                </div>
-                <a href={cert.link} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                  <ExternalLink size={16} />
-                </a>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-        */}
       </div>
     </Section>
   );

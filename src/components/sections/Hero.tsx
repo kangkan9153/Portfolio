@@ -78,7 +78,7 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="relative hidden lg:block"
+            className="relative mt-12 lg:mt-0"
           >
             {/* Sophisticated visual */}
             <div className="relative w-full aspect-square max-w-[500px] mx-auto">

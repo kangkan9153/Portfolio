@@ -19,11 +19,13 @@ const NAV_LINKS = [
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showProfilePic, setShowProfilePic] = useState(false);
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
+      setShowProfilePic(window.scrollY > window.innerHeight * 0.6);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -41,8 +43,32 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <a href="#" className="flex items-center gap-4 group">
-            <div className="h-10 w-10 bg-primary rounded flex items-center justify-center font-bold text-xl text-primary-foreground">
-              K
+            <div className="h-10 w-10 bg-primary rounded flex items-center justify-center font-bold text-xl text-primary-foreground overflow-hidden relative">
+              <AnimatePresence mode="wait">
+                {showProfilePic ? (
+                  <motion.img
+                    key="profile"
+                    initial={{ opacity: 0, y: 20, scale: 0.8 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -20, scale: 0.8 }}
+                    transition={{ duration: 0.3 }}
+                    src="https://i.postimg.cc/q7Mz7xCY/Whats-App-Image-2026-08-01-at-8-31-13-AM-(1).jpg"
+                    alt="Kangkan Sarkar"
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <motion.span
+                    key="letter"
+                    initial={{ opacity: 0, y: 20, scale: 0.8 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -20, scale: 0.8 }}
+                    transition={{ duration: 0.3 }}
+                    className="absolute"
+                  >
+                    K
+                  </motion.span>
+                )}
+              </AnimatePresence>
             </div>
             <div>
               <h1 className="text-lg font-bold tracking-tight">KANGKAN SARKAR</h1>
