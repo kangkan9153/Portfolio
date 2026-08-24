@@ -18,7 +18,7 @@ export const USER_INFO = {
     degree: "Bachelor of Technology",
     major: "Electronics and Communication Engineering",
     college: "Alipurduar Government Engineering and Management College",
-    graduation: "2026",
+    graduation: "2024-2028",
   }
 };
 
@@ -114,7 +114,7 @@ export const PROJECTS = [
     components: ["ESP32-CAM AI-Thinker", "PIR Motion Sensor", "18650 Battery Shield"],
     principles: "Direct Memory Access (DMA) is used to efficiently move camera buffer data to WiFi peripherals. Power management is handled via the RTC (Real Time Clock) domain.",
     future: "Adding basic facial recognition using Edge Impulse.",
-    image: "https://images.unsplash.com/photo-1592503254549-270440801584?auto=format&fit=crop&q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=1000",
     github: "#"
   },
   {

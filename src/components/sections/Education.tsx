@@ -6,7 +6,7 @@ import { GraduationCap, Award, ExternalLink } from 'lucide-react';
 export function Education() {
   return (
     <Section id="education" className="bg-muted/30">
-      <div className="grid md:grid-cols-2 gap-16">
+      <div className="grid gap-16 max-w-3xl mx-auto">
         <div>
           <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
             <GraduationCap className="text-primary" /> Education
@@ -30,6 +30,7 @@ export function Education() {
           </motion.div>
         </div>
 
+        {/* Saved for later if needed:
         <div>
           <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
             <Award className="text-primary" /> Certifications
@@ -60,6 +61,7 @@ export function Education() {
             ))}
           </div>
         </div>
+        */}
       </div>
     </Section>
   );

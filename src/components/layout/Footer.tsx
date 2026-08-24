@@ -36,7 +36,6 @@ export function Footer() {
             <span className="hidden sm:inline">COORD: 26.49°N 89.52°E</span>
             <span>CORE: ECE // SEM: 05</span>
           </div>
-          <p className="mt-2 md:mt-0 text-primary">SYS.STATUS: ONLINE // BUILD: 01</p>
         </div>
       </div>
     </footer>

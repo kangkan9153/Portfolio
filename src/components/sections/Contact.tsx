@@ -2,11 +2,12 @@ import { useState } from 'react';
 import { Section } from '../ui/Section';
 import { USER_INFO } from '../../data/portfolio';
 import { motion } from 'motion/react';
-import { Mail, Github, Linkedin, Instagram, Send, Terminal } from 'lucide-react';
+import { Mail, Github, Linkedin, Instagram, Send, Terminal, Check } from 'lucide-react';
 
 export function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
+  const [copied, setCopied] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -20,6 +21,28 @@ export function Contact() {
     }, 1500);
   };
 
+  const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    
+    // Copy to clipboard for convenience
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(USER_INFO.email);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+
+    // Check if it's a mobile device
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+      // Mobile: Use standard mailto
+      window.location.href = `mailto:${USER_INFO.email}`;
+    } else {
+      // Desktop: Open Gmail web compose in a new tab
+      window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${USER_INFO.email}`, '_blank');
+    }
+  };
+
   return (
     <Section id="contact" title="Get In Touch" subtitle="Have a project idea, collaboration, or just want to talk electronics?">
       <div className="grid lg:grid-cols-5 gap-12">
@@ -30,11 +53,23 @@ export function Contact() {
             <h3 className="font-bold text-xl mb-6">Contact Information</h3>
             
             <div className="space-y-4">
-              <a href={`mailto:${USER_INFO.email}`} className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors">
-                <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center">
-                  <Mail size={18} />
+              <a 
+                href={`mailto:${USER_INFO.email}`} 
+                onClick={handleEmailClick}
+                className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group cursor-pointer"
+              >
+                <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center relative overflow-hidden shrink-0">
+                  <div className={`absolute inset-0 flex items-center justify-center transition-transform duration-300 ${copied ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`}>
+                    <Check size={18} className="text-green-500" />
+                  </div>
+                  <div className={`absolute inset-0 flex items-center justify-center transition-transform duration-300 ${copied ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`}>
+                    <Mail size={18} className="group-hover:scale-110 transition-transform" />
+                  </div>
                 </div>
-                <span className="font-medium">{USER_INFO.email}</span>
+                <div className="flex flex-col">
+                  <span className="font-medium text-foreground">{USER_INFO.email}</span>
+                  <span className="text-xs text-muted-foreground/70">{copied ? 'Copied to clipboard! Opening Gmail...' : 'Send an email'}</span>
+                </div>
               </a>
               
               <a href={USER_INFO.github} target="_blank" rel="noreferrer" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors">
