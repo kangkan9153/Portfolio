@@ -84,7 +84,7 @@ export const PROJECTS = [
     principles: "Utilizes MQTT for lightweight communication between the device and the broker. FreeRTOS is used on the ESP32 to handle sensor polling and network tasks concurrently.",
     future: "Implementing voice control via local AI and adding power consumption monitoring.",
     image: "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&q=80&w=1000",
-    github: "#"
+    github: "https://github.com/kangkan9153/ESP32-Smart-Home-Automation-Code/blob/main/automation_P01.ino"
   },
   {
     id: "gesture-rgb",
