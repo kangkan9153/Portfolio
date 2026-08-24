@@ -60,18 +60,14 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="bg-foreground text-background p-6 rounded-2xl">
-            <div className="flex items-center gap-2 mb-4 text-background/70 font-mono-tech text-sm">
-              <Terminal size={16} />
-              <span>terminal</span>
+          <div className="bg-card border border-border p-6 rounded-2xl flex items-center gap-4">
+            <div className="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center shrink-0">
+              <span className="relative flex h-4 w-4">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-4 w-4 bg-green-500"></span>
+              </span>
             </div>
-            <div className="font-mono-tech text-sm space-y-2">
-              <p className="text-primary">$ ping kangkan.sarkar</p>
-              <p className="text-background/80">Reply from Kangkan: bytes=32 time=2ms TTL=119</p>
-              <p className="text-primary mt-4">$ status --current</p>
-              <p className="text-green-400">Available for new opportunities.</p>
-              <span className="animate-pulse">_</span>
-            </div>
+            <p className="text-green-500 font-medium">Available for new opportunities.</p>
           </div>
 
         </div>

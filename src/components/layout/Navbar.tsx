@@ -46,7 +46,6 @@ export function Navbar() {
             </div>
             <div>
               <h1 className="text-lg font-bold tracking-tight">KANGKAN SARKAR</h1>
-              <p className="text-[10px] font-mono-tech text-primary uppercase">SYS.STATUS: ONLINE // BUILD: 01</p>
             </div>
           </a>
         </div>
@@ -75,7 +74,9 @@ export function Navbar() {
               {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
             </button>
             <a
-              href="#resume"
+              href="https://drive.google.com/file/d/1ntEvTrXSi9PuLk8nGqmmX0qmSJmRag7f/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
               className="bg-primary/10 border border-primary/30 text-primary px-4 py-1.5 rounded-full text-[11px] font-mono-tech uppercase tracking-widest transition-colors hover:bg-primary/20"
             >
               Resume
@@ -121,7 +122,9 @@ export function Navbar() {
                 </a>
               ))}
               <a
-                href="#resume"
+                href="https://drive.google.com/file/d/1ntEvTrXSi9PuLk8nGqmmX0qmSJmRag7f/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
                 className="bg-primary text-primary-foreground px-4 py-3 rounded-lg text-center font-medium mt-4"
               >
                 Download Resume

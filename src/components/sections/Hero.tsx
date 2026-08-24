@@ -30,7 +30,7 @@ export function Hero() {
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-muted border border-border text-sm font-mono-tech mb-6">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                ECE / 2026
+                ECE / 2024-28
               </div>
               
               <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-[1.1] mb-6 text-foreground">
@@ -57,7 +57,9 @@ export function Hero() {
                 <ArrowRight size={16} />
               </a>
               <a
-                href="#resume"
+                href="https://drive.google.com/file/d/1ntEvTrXSi9PuLk8nGqmmX0qmSJmRag7f/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center gap-2 bg-transparent hover:bg-muted text-foreground border border-border px-6 py-3 rounded-lg font-bold text-sm transition-colors"
               >
                 <Download size={16} />
