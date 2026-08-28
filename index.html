@@ -13,6 +13,24 @@
     <meta property="og:title" content="Kangkan Sarkar | Portfolio" />
     <meta property="og:description" content="An aspiring electronics engineer focused on hardware and digital design." />
     <meta property="og:type" content="website" />
+    <script>
+      (function() {
+        try {
+          var storedTheme = localStorage.getItem('portfolio-ui-theme');
+          var isDark = storedTheme === 'dark' || (!storedTheme); // Default is dark
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      html.dark body { background-color: #09090b; color: #f1f5f9; }
+      html:not(.dark) body { background-color: #ffffff; color: #0f172a; }
+      body { margin: 0; }
+    </style>
   </head>
   <body class="antialiased selection:bg-primary/30">
     <div id="root"></div>
