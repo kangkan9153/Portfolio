@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Section } from '../ui/Section';
 import { GALLERY_IMAGES } from '../../data/portfolio';
 import { motion, AnimatePresence } from 'motion/react';
@@ -11,19 +11,40 @@ export function Gallery() {
   const openLightbox = (index: number) => setLightboxIndex(index);
   const closeLightbox = () => setLightboxIndex(null);
   
-  const nextImage = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const nextImage = useCallback((e?: React.MouseEvent) => {
+    e?.stopPropagation();
     if (lightboxIndex !== null) {
-      setLightboxIndex((lightboxIndex + 1) % GALLERY_IMAGES.length);
+      setLightboxIndex((prev) => prev !== null ? (prev + 1) % GALLERY_IMAGES.length : null);
     }
-  };
+  }, [lightboxIndex]);
   
-  const prevImage = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const prevImage = useCallback((e?: React.MouseEvent) => {
+    e?.stopPropagation();
     if (lightboxIndex !== null) {
-      setLightboxIndex((lightboxIndex - 1 + GALLERY_IMAGES.length) % GALLERY_IMAGES.length);
+      setLightboxIndex((prev) => prev !== null ? (prev - 1 + GALLERY_IMAGES.length) % GALLERY_IMAGES.length : null);
     }
-  };
+  }, [lightboxIndex]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (lightboxIndex === null) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') nextImage();
+      if (e.key === 'ArrowLeft') prevImage();
+    };
+
+    if (lightboxIndex !== null) {
+      window.addEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [lightboxIndex, nextImage, prevImage]);
 
   return (
     <Section id="gallery" title="Gallery" subtitle="Glimpses of projects, hardware, and photography.">
@@ -57,16 +78,16 @@ export function Gallery() {
       <AnimatePresence>
         {lightboxIndex !== null && (
           <div className="fixed inset-0 z-[200] flex items-center justify-center bg-background/95 backdrop-blur-xl" onClick={closeLightbox}>
-            <button className="absolute top-6 right-6 text-muted-foreground hover:text-foreground transition-colors p-2 z-10" onClick={closeLightbox}>
+            <button className="absolute top-4 right-4 sm:top-6 sm:right-6 text-foreground/70 hover:text-foreground hover:bg-background/80 bg-background/50 backdrop-blur-md rounded-full transition-colors p-2 z-[300] shadow-md" onClick={closeLightbox}>
               <X size={32} />
             </button>
             
-            <button className="absolute left-6 text-muted-foreground hover:text-foreground transition-colors p-4 z-10 hidden sm:block" onClick={prevImage}>
-              <ChevronLeft size={48} strokeWidth={1} />
+            <button className="absolute left-4 sm:left-6 text-foreground/70 hover:text-foreground hover:bg-background/80 bg-background/50 backdrop-blur-md rounded-full transition-colors p-3 sm:p-4 z-[300] hidden sm:block shadow-md" onClick={prevImage}>
+              <ChevronLeft size={36} strokeWidth={1.5} className="sm:w-12 sm:h-12" />
             </button>
             
-            <button className="absolute right-6 text-muted-foreground hover:text-foreground transition-colors p-4 z-10 hidden sm:block" onClick={nextImage}>
-              <ChevronRight size={48} strokeWidth={1} />
+            <button className="absolute right-4 sm:right-6 text-foreground/70 hover:text-foreground hover:bg-background/80 bg-background/50 backdrop-blur-md rounded-full transition-colors p-3 sm:p-4 z-[300] hidden sm:block shadow-md" onClick={nextImage}>
+              <ChevronRight size={36} strokeWidth={1.5} className="sm:w-12 sm:h-12" />
             </button>
 
             <motion.div 

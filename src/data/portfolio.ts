@@ -187,7 +187,7 @@ export const CERTIFICATIONS = [
 ];
 
 export const GALLERY_IMAGES = [
-  { src: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800", alt: "Circuit Board", category: "Electronics" },
+  { src: "https://drive.google.com/thumbnail?id=1otlF3IJt_d_KEYRUcOILPMbKqMVLHYEX&sz=w1000", alt: "Gallery Image 1", category: "Electronics" },
   { src: "https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&q=80&w=800", alt: "Hardware prototyping", category: "Projects" },
   { src: "https://images.unsplash.com/photo-1504610926078-a1611febcad3?auto=format&fit=crop&q=80&w=800", alt: "Soldering tools", category: "Electronics" },
   { src: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=800", alt: "Microchip macro", category: "Electronics" },
