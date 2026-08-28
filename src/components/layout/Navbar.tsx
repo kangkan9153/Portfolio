@@ -54,7 +54,7 @@ export function Navbar() {
                     transition={{ duration: 0.3 }}
                     src="https://i.postimg.cc/q7Mz7xCY/Whats-App-Image-2026-08-01-at-8-31-13-AM-(1).jpg"
                     alt="Kangkan Sarkar"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover grayscale"
                   />
                 ) : (
                   <motion.span
