@@ -52,7 +52,7 @@ export function Navbar() {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: -20, scale: 0.8 }}
                     transition={{ duration: 0.3 }}
-                    src="https://i.postimg.cc/q7Mz7xCY/Whats-App-Image-2026-08-01-at-8-31-13-AM-(1).jpg"
+                    src="https://i.postimg.cc/q7Mz7xCY/Profile_Pic.jpg"
                     alt="Kangkan Sarkar"
                     className="w-full h-full object-cover grayscale"
                   />
