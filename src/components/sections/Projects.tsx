@@ -124,11 +124,13 @@ export function Projects() {
                     <span className="text-sm text-muted-foreground font-mono-tech block mb-1">Status</span>
                     <span className="font-medium">{selectedProject.status}</span>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <a href={selectedProject.github} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-4 py-2 bg-muted hover:bg-muted/80 rounded-lg text-sm font-medium transition-colors">
-                      <Github size={16} /> Code
-                    </a>
-                  </div>
+                  {selectedProject.github && selectedProject.github !== "#" && (
+                    <div className="flex items-center gap-4">
+                      <a href={selectedProject.github} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-4 py-2 bg-muted hover:bg-muted/80 rounded-lg text-sm font-medium transition-colors">
+                        <Github size={16} /> Code
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             </motion.div>
