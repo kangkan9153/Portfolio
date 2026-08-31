@@ -188,9 +188,9 @@ export const CERTIFICATIONS = [
 
 export const GALLERY_IMAGES = [
   { src: "https://drive.google.com/thumbnail?id=1otlF3IJt_d_KEYRUcOILPMbKqMVLHYEX&sz=w1000", alt: "Gallery Image 1", category: "Microcontrollers" },
-  { src: "https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&q=80&w=800", alt: "Hardware prototyping", category: "Projects" },
-  { src: "https://images.unsplash.com/photo-1504610926078-a1611febcad3?auto=format&fit=crop&q=80&w=800", alt: "Soldering tools", category: "Electronics" },
-  { src: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=800", alt: "Microchip macro", category: "Electronics" },
-  { src: "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?auto=format&fit=crop&q=80&w=800", alt: "Electronics workspace", category: "Projects" },
-  { src: "https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&q=80&w=800", alt: "Sensors and breadboard", category: "Projects" }
+  { src: "https://drive.google.com/thumbnail?id=1tRzHu-hTolE1GZBTcdFs0oovnSI9xt9t&sz=w1000", alt: "Hardware prototyping", category: "Projects" },
+  { src: "https://drive.google.com/thumbnail?id=1c7ZtB-tsVqCurEVCJp3KjlKlvBQDGdw3&sz=w1000", alt: "Soldering tools", category: "Electronics" },
+  { src: "https://drive.google.com/thumbnail?id=1Q2Fa7-tUi3ABW_-UfzrSvEhlTOIERViz&sz=w1000", alt: "Microchip macro", category: "Electronics" },
+  { src: "https://drive.google.com/thumbnail?id=1UaswO7M04VA1GVcgEjyaT2ZIKjU7Qv1O&sz=w1000", alt: "Electronics workspace", category: "Projects" },
+  { src: "https://drive.google.com/thumbnail?id=1FnkHvU8Z7gbSE3qU6tovAJ5Sas0pKt4V&sz=w1000", alt: "Sensors and breadboard", category: "Projects" }
 ];
