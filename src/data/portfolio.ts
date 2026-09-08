@@ -5,7 +5,7 @@ export const USER_INFO = {
   role: "Electronics & Communication Engineering Student",
   description: "Electronics & Communication Engineering student exploring VLSI, PCB Design, Embedded Systems and Hardware Development.",
   email: "kangkan9153@gmail.com",
-  github: "https://github.com/kangkan9153",
+  github: "https://github.com",
   linkedin: "https://www.linkedin.com/in/kangkan-sarkar06/",
   instagram: "https://www.instagram.com/kangkanskr/",
   stats: {
@@ -100,6 +100,21 @@ export const PROJECTS = [
     future: "Expanding to a synchronized multi-room setup using ESP8266.",
     image: "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&q=80&w=1000",
     github: "https://github.com/kangkan9153/Gesture-Controlled-RGB-Lighting/blob/main/code"
+  },
+  {
+    id: "esp32-cam-vision",
+    title: "ESP32-CAM Vision Project",
+    tags: ["ESP32-CAM", "Computer Vision", "Embedded Systems"],
+    status: "Prototype",
+    description: "Low-cost wireless camera node for basic image processing and surveillance.",
+    longDescription: "Exploring the capabilities of the ESP32-CAM module for edge computing. This prototype streams video over WiFi and performs basic motion detection.",
+    problem: "Deploying camera nodes in remote areas of a campus or home is restricted by power and wiring constraints.",
+    solution: "Created a battery-powered ESP32-CAM node with a deep-sleep strategy that wakes up on PIR sensor triggers to capture and upload images.",
+    components: ["ESP32-CAM AI-Thinker", "PIR Motion Sensor", "18650 Battery Shield"],
+    principles: "Direct Memory Access (DMA) is used to efficiently move camera buffer data to WiFi peripherals. Power management is handled via the RTC (Real Time Clock) domain.",
+    future: "Adding basic facial recognition using Edge Impulse.",
+    image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=1000",
+    github: "#"
   },
   {
     id: "kicad-pcb-design",
