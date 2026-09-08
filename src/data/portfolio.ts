@@ -5,7 +5,7 @@ export const USER_INFO = {
   role: "Electronics & Communication Engineering Student",
   description: "Electronics & Communication Engineering student exploring VLSI, PCB Design, Embedded Systems and Hardware Development.",
   email: "kangkan9153@gmail.com",
-  github: "https://github.com",
+  github: "https://github.com/kangkan9153",
   linkedin: "https://www.linkedin.com/in/kangkan-sarkar06/",
   instagram: "https://www.instagram.com/kangkanskr/",
   stats: {
