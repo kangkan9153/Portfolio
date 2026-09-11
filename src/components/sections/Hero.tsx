@@ -93,7 +93,7 @@ export function Hero() {
                   className="relative z-10 w-64 h-64 rounded-2xl border-4 border-muted shadow-2xl overflow-hidden"
                 >
                   <img 
-                    src="https://i.postimg.cc/q7Mz7xCY/Whats-App-Image-2026-08-01-at-8-31-13-AM-(1).jpg" 
+                    src="https://i.postimg.cc/CxTMf0rf/20260909-223402-removebg-preview-520x589.jpg" 
                     alt="Kangkan Sarkar"
                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                   />
